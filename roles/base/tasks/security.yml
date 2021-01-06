@@ -1,0 +1,22 @@
+---
+- name: roles/base/tasks/security.yml
+  set_fact: dummy=0
+
+- name: Install tools required for disabling selinux
+  yum: 
+    name: 
+      - libselinux-python
+    state: present
+  become: yes
+
+- name: Disable selinux 
+  selinux:
+    state: disabled
+  become: yes
+
+- name: Disable iptables
+  service:
+    name: iptables
+    state: stopped
+    enabled: no
+  become: yes

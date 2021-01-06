@@ -1,0 +1,23 @@
+---
+- name: roles/base/tasks/mandatory.yml
+  set_fact: dummy=0
+
+- name: Install mandatory packages 
+  yum: 
+    name:
+      - glibc-devel
+      - gcc-c++
+      - git
+      - patch
+      - rsync
+      - vim-enhanced
+      - nkf
+      - bind-utils
+      - unzip
+      - bzip2
+      - wget
+      - w3m
+      - kernel-devel
+      - man
+      - npm
+  become: yes

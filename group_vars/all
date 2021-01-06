@@ -1,0 +1,12 @@
+# group_vars/all
+
+# ------------------------ System global -----------------------------
+_V:                   "{{ ansible_distribution_major_version }}"
+SYSTEM_LOCALE:        ja
+TIME_ZONE:            Asia/Tokyo
+PROMPT_FILE:          bash_prompt.sh
+# ----------------------------- MariaDB ------------------------------
+MARIADB_VER:          '10.4'
+MARIADB_ROOT_PW:       'p@ssw0rd'
+MARIADB_PORT:         3306
+MARIADB_SOCKET:       /var/lib/mysql/mysql.sock

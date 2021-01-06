@@ -1,0 +1,8 @@
+# Set locale
+---
+- name: roles/base/tasks/locale.yml
+  set_fact: dummy=0
+
+- name: Set Locale to ja_JP.utf8
+  command: localedef -f UTF-8 -i ja_JP ja_JP.utf8
+  become: yes

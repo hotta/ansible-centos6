@@ -1,0 +1,11 @@
+# Basic Congiguration Control
+---
+- name: roles/base/tasks/main.yml
+  set_fact: dummy=0
+
+- import_tasks: security.yml
+- import_tasks: mandatory.yml
+- import_tasks: prompt.yml
+- import_tasks: time.yml
+- import_tasks: locale.yml
+  tags: new
