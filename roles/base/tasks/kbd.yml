@@ -1,0 +1,9 @@
+# Make key repeat faster
+---
+- name: roles/base/tasks/kbd.yml
+  set_fact: dummy=0
+
+- name: Make key repeat faster
+  command: kbdrate -r 20 -d 100
+  become: yes
+
